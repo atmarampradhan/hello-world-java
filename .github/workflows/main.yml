@@ -1,0 +1,9 @@
+name: compile java
+on: [push]
+jobs:
+  compile-java-code:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: javac HelloWorld.java
+      - run: java HelloWorld.java
